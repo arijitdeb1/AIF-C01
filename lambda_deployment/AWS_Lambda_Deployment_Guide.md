@@ -49,7 +49,7 @@ docker run --rm -v "${PWD}/..:/var/task" \
   /bin/sh -c "pip install --target /var/task/lambda-layer/python -r /var/task/requirements.txt --platform manylinux2014_x86_64 --only-binary=:all: --upgrade"
 
 # For PowerShell:
-docker run --rm -v "${PWD}/..:/var/task" `
+docker run --rm -v "${PWD}:/var/task" `
   --platform linux/amd64 `
   --entrypoint "" `
   public.ecr.aws/lambda/python:3.12 `
